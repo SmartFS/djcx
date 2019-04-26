@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.sicau.djcx.mapper.AirticleMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.sicau.djcx.entity.Airticle">
+        <id column="ariticle_id" property="ariticleId" />
+        <result column="aid" property="aid" />
+        <result column="art_aid" property="artAid" />
+        <result column="updatetime" property="updatetime" />
+        <result column="title" property="title" />
+        <result column="content" property="content" />
+        <result column="author" property="author" />
+        <result column="page_view" property="pageView" />
+        <result column="abstract" property="abstract" />
+        <result column="label" property="label" />
+    </resultMap>
+
+</mapper>
