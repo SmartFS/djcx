@@ -2,6 +2,8 @@ package cn.sicau.djcx;
 
 import cn.sicau.djcx.entity.User;
 import cn.sicau.djcx.mapper.UserMapper;
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import org.apache.ibatis.annotations.Param;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mybatis.spring.annotation.MapperScan;
@@ -10,10 +12,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
 import java.sql.Wrapper;
+import java.util.List;
+import java.util.Map;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@MapperScan("cn.sicau.djcx.mapper")
 public class DjcxApplicationTests {
 
     @Resource
@@ -22,12 +25,10 @@ public class DjcxApplicationTests {
 
     @Test
     public void contextLoads() {
-      //  userMapper.selectList(Wrapper<>);
-        User user = new User();
-        user.setAccount("1234214");
-        user.setPassword("452421");
-        user.setPermission("1");
-        userMapper.insert(user);
+        List<User> users = userMapper.selectList(new EntityWrapper<User>());
+        for (User user:users){
+            System.out.println(user.getAccount()+user.getPassword());
+        }
 
     }
 

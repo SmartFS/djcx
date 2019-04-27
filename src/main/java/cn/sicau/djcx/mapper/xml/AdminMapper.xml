@@ -3,6 +3,7 @@
 <mapper namespace="cn.sicau.djcx.mapper.AdminMapper">
 
     <!-- 通用查询映射结果 -->
+
     <resultMap id="BaseResultMap" type="cn.sicau.djcx.entity.Admin">
         <id column="aid" property="aid" />
         <result column="job_id" property="jobId" />
