@@ -29,7 +29,7 @@ public class Airticle extends Model<Airticle> {
     private String author;
     @TableField("page_view")
     private Integer pageView;
-    private String abstract;
+    private String summary;
     private String label;
 
 
@@ -97,12 +97,12 @@ public class Airticle extends Model<Airticle> {
         this.pageView = pageView;
     }
 
-    public String getAbstract() {
-        return abstract;
+    public String getSummary() {
+        return summary;
     }
 
-    public void setAbstract(String abstract) {
-        this.abstract = abstract;
+    public void setSummary(String summary) {
+        this.summary = summary;
     }
 
     public String getLabel() {
@@ -121,16 +121,16 @@ public class Airticle extends Model<Airticle> {
     @Override
     public String toString() {
         return "Airticle{" +
-        ", ariticleId=" + ariticleId +
-        ", aid=" + aid +
-        ", artAid=" + artAid +
-        ", updatetime=" + updatetime +
-        ", title=" + title +
-        ", content=" + content +
-        ", author=" + author +
-        ", pageView=" + pageView +
-        ", abstract=" + abstract +
-        ", label=" + label +
-        "}";
+                "ariticleId='" + ariticleId + '\'' +
+                ", aid=" + aid +
+                ", artAid=" + artAid +
+                ", updatetime=" + updatetime +
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", author='" + author + '\'' +
+                ", pageView=" + pageView +
+                ", summary='" + summary + '\'' +
+                ", label='" + label + '\'' +
+                '}';
     }
 }

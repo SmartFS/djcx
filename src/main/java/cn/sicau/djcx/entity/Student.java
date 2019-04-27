@@ -19,7 +19,7 @@ public class Student extends Model<Student> {
 
     private Long userid;
     private String sname;
-    private String class;
+    private String sclass;
     private String phone;
     private String email;
     private String identity;
@@ -53,12 +53,12 @@ public class Student extends Model<Student> {
         this.sname = sname;
     }
 
-    public String getClass() {
-        return class;
+    public String getSclass() {
+        return sclass;
     }
 
-    public void setClass(String class) {
-        this.class = class;
+    public void setSclass(String sclass) {
+        this.sclass = sclass;
     }
 
     public String getPhone() {
@@ -141,18 +141,18 @@ public class Student extends Model<Student> {
     @Override
     public String toString() {
         return "Student{" +
-        ", userid=" + userid +
-        ", sname=" + sname +
-        ", class=" + class +
-        ", phone=" + phone +
-        ", email=" + email +
-        ", identity=" + identity +
-        ", applicationTime=" + applicationTime +
-        ", activistTime=" + activistTime +
-        ", potentialTime=" + potentialTime +
-        ", probationaryTime=" + probationaryTime +
-        ", fullpartyTime=" + fullpartyTime +
-        ", registerStatus=" + registerStatus +
-        "}";
+                "userid=" + userid +
+                ", sname='" + sname + '\'' +
+                ", sclass='" + sclass + '\'' +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
+                ", identity='" + identity + '\'' +
+                ", applicationTime=" + applicationTime +
+                ", activistTime=" + activistTime +
+                ", potentialTime=" + potentialTime +
+                ", probationaryTime=" + probationaryTime +
+                ", fullpartyTime=" + fullpartyTime +
+                ", registerStatus='" + registerStatus + '\'' +
+                '}';
     }
 }

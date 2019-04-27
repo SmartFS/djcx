@@ -18,6 +18,7 @@ public class Rules extends Model<Rules> {
 
     @TableField("punch_require")
     private Integer punchRequire;
+    private Serializable id;
 
 
     public Integer getPunchRequire() {
