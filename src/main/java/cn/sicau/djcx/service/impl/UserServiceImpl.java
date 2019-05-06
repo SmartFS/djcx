@@ -19,8 +19,12 @@ import java.util.List;
  */
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService {
-
-
+    @Autowired
+    UserMapper userMapper;
+    public Integer addUser(User user){
+        Integer insert = userMapper.insert(user);
+        return insert;
+    }
 
 
 }

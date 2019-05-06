@@ -1,6 +1,9 @@
 package cn.sicau.djcx.entity;
 
 import com.baomidou.mybatisplus.activerecord.Model;
+import com.baomidou.mybatisplus.annotations.TableId;
+import lombok.Data;
+
 import java.io.Serializable;
 
 /**
@@ -11,6 +14,7 @@ import java.io.Serializable;
  * @author FS
  * @since 2019-04-26
  */
+
 public class User extends Model<User> {
 
     private static final long serialVersionUID = 1L;
@@ -18,6 +22,7 @@ public class User extends Model<User> {
     private String account;
     private String password;
     private String permission;
+    @TableId
     private Long userid;
 
 

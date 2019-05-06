@@ -4,6 +4,7 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="cn.sicau.djcx.entity.Rules">
+        <id column="aid" property="aid"/>
         <result column="punch_require" property="punchRequire" />
     </resultMap>
 

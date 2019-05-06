@@ -20,9 +20,7 @@ import java.util.List;
 @MapperScan("cn.sicau.djcx.mapper")
 public class DjcxApplication {
 
-
     public static void main(String[] args) {
-
         SpringApplication.run(DjcxApplication.class, args);
     }
 

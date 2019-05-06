@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
  * @author FS
  * @since 2019-04-26
  */
-@Component(value = "AdminMapper")
+
 public interface AdminMapper extends BaseMapper<Admin> {
 
 }

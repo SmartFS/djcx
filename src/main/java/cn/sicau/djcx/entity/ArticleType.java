@@ -2,6 +2,7 @@ package cn.sicau.djcx.entity;
 
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
+import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import java.io.Serializable;
 
@@ -20,6 +21,7 @@ public class ArticleType extends Model<ArticleType> {
 
     @TableField("type_name")
     private String typeName;
+    @TableId
     private Long aid;
 
 

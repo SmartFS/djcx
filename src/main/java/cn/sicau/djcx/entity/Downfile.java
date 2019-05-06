@@ -17,6 +17,7 @@ public class Downfile extends Model<Downfile> {
 
     private static final long serialVersionUID = 1L;
 
+
     @TableId("file_id")
     private String fileId;
     @TableField("file_name")

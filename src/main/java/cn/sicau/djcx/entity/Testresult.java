@@ -2,6 +2,8 @@ package cn.sicau.djcx.entity;
 
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
+import com.baomidou.mybatisplus.annotations.TableId;
+
 import java.io.Serializable;
 
 /**
@@ -15,7 +17,7 @@ import java.io.Serializable;
 public class Testresult extends Model<Testresult> {
 
     private static final long serialVersionUID = 1L;
-
+    @TableId
     private String sid;
     @TableField("test_id")
     private String testId;

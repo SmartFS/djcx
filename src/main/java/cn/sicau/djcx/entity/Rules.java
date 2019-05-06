@@ -2,11 +2,13 @@ package cn.sicau.djcx.entity;
 
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
+import com.baomidou.mybatisplus.annotations.TableId;
+
 import java.io.Serializable;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author FS
@@ -18,7 +20,8 @@ public class Rules extends Model<Rules> {
 
     @TableField("punch_require")
     private Integer punchRequire;
-    private Serializable id;
+    @TableId
+    private Integer aid;
 
 
     public Integer getPunchRequire() {
@@ -30,14 +33,23 @@ public class Rules extends Model<Rules> {
     }
 
     @Override
-    protected Serializable pkVal() {
-        return this.id;
+    public String toString() {
+        return "Rules{" +
+                "punchRequire=" + punchRequire +
+                ", aid=" + aid +
+                '}';
+    }
+
+    public Integer getAid() {
+        return aid;
+    }
+
+    public void setAid(Integer aid) {
+        this.aid = aid;
     }
 
     @Override
-    public String toString() {
-        return "Rules{" +
-        ", punchRequire=" + punchRequire +
-        "}";
+    protected Serializable pkVal() {
+        return aid;
     }
 }
