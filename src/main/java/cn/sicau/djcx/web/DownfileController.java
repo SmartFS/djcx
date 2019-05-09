@@ -25,10 +25,7 @@ public class DownfileController {
     @Resource
     DownfileMapper downfileMapper;
     public void insertFile(){
-        Downfile downfile = new Downfile();
-        downfile.setFileId("fangfna");
-        downfile.setFileUrl("shusa");
-        downfileMapper.insert(downfile);
+
     }
 }
 

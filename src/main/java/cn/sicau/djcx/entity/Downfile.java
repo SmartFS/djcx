@@ -3,6 +3,8 @@ package cn.sicau.djcx.entity;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
+import com.baomidou.mybatisplus.enums.IdType;
+
 import java.io.Serializable;
 
 /**
@@ -18,19 +20,19 @@ public class Downfile extends Model<Downfile> {
     private static final long serialVersionUID = 1L;
 
 
-    @TableId("file_id")
-    private String fileId;
+    @TableId(value = "file_id",type = IdType.AUTO)
+    private Long fileId;
     @TableField("file_name")
     private String fileName;
     @TableField("file_url")
     private String fileUrl;
 
 
-    public String getFileId() {
+    public Long getFileId() {
         return fileId;
     }
 
-    public void setFileId(String fileId) {
+    public void setFileId(Long fileId) {
         this.fileId = fileId;
     }
 

@@ -3,6 +3,7 @@ package cn.sicau.djcx.entity;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.enums.IdType;
 
 import java.io.Serializable;
 
@@ -20,7 +21,7 @@ public class Rules extends Model<Rules> {
 
     @TableField("punch_require")
     private Integer punchRequire;
-    @TableId
+    @TableId(value = "aid")
     private Integer aid;
 
 
@@ -31,6 +32,8 @@ public class Rules extends Model<Rules> {
     public void setPunchRequire(Integer punchRequire) {
         this.punchRequire = punchRequire;
     }
+
+
 
     @Override
     public String toString() {

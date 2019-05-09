@@ -14,6 +14,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
 import java.sql.Wrapper;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -29,26 +31,11 @@ public class DjcxApplicationTests {
 
     @Test
     public void contextLoads() {
-             //  List<Admin> users = userMapper.selectList(new EntityWrapper<User>());
-        List<Admin> admins = adminMapper.selectList(new EntityWrapper<Admin>());
-        User user = new User();
-        user.setAccount("fangsheng");
-        user.setPassword("123456");
-        user.setPermission("01");
-        user.setUserid(666L);
-        userMapper.insert(user);
-        //Integer integer = userMapper.deleteById("1");
-        Integer integer = userMapper.delete(new EntityWrapper<User>());
-         userMapper.selectList(new EntityWrapper<User>());
+        String format = "yyyy-MM-dd HH:mm:ss";
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(format);
 
-        if(integer>0)
-           System.out.println("删除成功");
-        else System.out.println("删除失败");
-        for (Admin admin:admins){
-            System.out.println("============");
-            System.out.println("用户名："+admin.getUsename()+"工作ID"+admin.getJobId());
-            System.out.println("=================");
-        }
+        String s = simpleDateFormat.format(new Date(Long.parseLong(String.valueOf("1559368035000"))));
+        System.out.println(s);
 
     }
 

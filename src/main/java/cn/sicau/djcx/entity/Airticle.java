@@ -4,6 +4,9 @@ import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+
 import java.io.Serializable;
 
 /**
@@ -23,7 +26,9 @@ public class Airticle extends Model<Airticle> {
     private Long aid;
     @TableField("art_aid")
     private Long artAid;
+    @JsonFormat(timezone = "GMT+8" ,pattern ="yyyyMMddHHmmss")
     private Date updatetime;
+
     private String title;
     private String content;
     private String author;

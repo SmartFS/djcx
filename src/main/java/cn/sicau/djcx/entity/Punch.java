@@ -4,6 +4,7 @@ import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.enums.IdType;
 
 import java.io.Serializable;
 
@@ -22,7 +23,7 @@ public class Punch extends Model<Punch> {
     private Long sid;
     @TableField("punch_time")
     private Date punchTime;
-    @TableId
+    @TableId(value = "aid",type = IdType.AUTO)
     private Long aid;
 
 

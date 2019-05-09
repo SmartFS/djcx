@@ -34,6 +34,7 @@ public class TestController {
         int cnt = userService.selectCount(new EntityWrapper<User>());
         User user = userService.selectById(1234);
 
+
         //select count(*) from user where username = #{userName} and password = #{password}
         if (cnt > 0) {
             return "success login";

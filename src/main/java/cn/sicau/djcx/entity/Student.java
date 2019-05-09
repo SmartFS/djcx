@@ -4,6 +4,7 @@ import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.enums.IdType;
 
 import java.io.Serializable;
 
@@ -19,7 +20,7 @@ public class Student extends Model<Student> {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId
+    @TableId(value = "userid",type = IdType.AUTO)
     private Long userid;
     private String sname;
     private String sclass;

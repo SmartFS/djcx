@@ -2,6 +2,7 @@ package cn.sicau.djcx.entity;
 
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.enums.IdType;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -22,7 +23,7 @@ public class User extends Model<User> {
     private String account;
     private String password;
     private String permission;
-    @TableId
+    @TableId(value = "userid",type = IdType.AUTO)
     private Long userid;
 
 

@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.enums.IdType;
+
 import java.io.Serializable;
 
 /**
@@ -21,7 +23,7 @@ public class ArticleType extends Model<ArticleType> {
 
     @TableField("type_name")
     private String typeName;
-    @TableId
+    @TableId(value = "aid",type = IdType.AUTO)
     private Long aid;
 
 

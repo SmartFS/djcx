@@ -3,6 +3,7 @@ package cn.sicau.djcx.entity;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.enums.IdType;
 
 import java.io.Serializable;
 
@@ -17,7 +18,7 @@ import java.io.Serializable;
 public class Admin extends Model<Admin> {
 
     private static final long serialVersionUID = 1L;
-    @TableId
+    @TableId(value = "aid",type = IdType.AUTO)//value表示和数据库的名称一样，后面个参数是自增
     private Long aid;
     @TableField("job_id")
     private String jobId;

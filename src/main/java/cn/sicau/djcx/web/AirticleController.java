@@ -1,11 +1,22 @@
 package cn.sicau.djcx.web;
 
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import cn.sicau.djcx.entity.Airticle;
+import cn.sicau.djcx.mapper.AirticleMapper;
+import cn.sicau.djcx.service.impl.AirticleServiceImpl;
+import com.alibaba.fastjson.JSON;
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import com.baomidou.mybatisplus.plugins.Page;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 import org.springframework.stereotype.Controller;
+
+import javax.annotation.Resource;
+import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -19,9 +30,16 @@ import org.springframework.stereotype.Controller;
 @RequestMapping("/airticle")
 public class AirticleController {
 
-    @GetMapping("/fjia")
-    public void maia(){
+    @Autowired
+    AirticleServiceImpl airticleService;
 
+    @ResponseBody
+    @GetMapping("/airticles/{num}")
+    public String getAllArticle(@PathVariable("num") int num) {
+        //获得所有的文章信息，文章链接应包含在content属性中
+        List<Airticle> allAirticles = airticleService.getAllAirticles(num);
+        String string = JSON.toJSONString(allAirticles);
+        return string;
     }
     
 
