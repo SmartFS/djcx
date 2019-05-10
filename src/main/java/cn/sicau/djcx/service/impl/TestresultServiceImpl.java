@@ -22,6 +22,9 @@ public class TestresultServiceImpl extends ServiceImpl<TestresultMapper, Testres
     TestresultMapper testresultMapper;
 
     public Integer addTestResult(Testresult testresult){
-        return 1;
+
+        Integer insert = testresultMapper.insert(testresult);
+
+        return insert;
     }
 }

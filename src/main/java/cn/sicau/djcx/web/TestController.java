@@ -33,8 +33,14 @@ public class TestController {
 
 
     @GetMapping("/testinfo")
-    public Integer testInfo(Test test) {
-       return 1;
+    public String  testInfo(Test test) {
+
+        Integer integer = testService.addTestInfo(test);
+        if (integer == null)
+            return "测试信息添加失败";
+        else
+            return "测试信息添加成功";
+
     }
 }
 

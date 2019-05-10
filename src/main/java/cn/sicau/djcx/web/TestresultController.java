@@ -25,9 +25,16 @@ public class TestresultController {
     TestresultServiceImpl testresultService;
 
 
-    @GetMapping("/test")
-    public  Integer addTestResult(Testresult testresult){
-        return 1;
+    @GetMapping("/results")
+    public  String addTestResult(Testresult testresult){
+
+        Integer integer = testresultService.addTestResult(testresult);
+
+        if (integer == null)
+        return "测试结果添加失败";
+        else
+            return "测试结果添加成功";
+
     }
 
 }

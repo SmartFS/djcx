@@ -39,7 +39,10 @@ public class AirticleController {
         //获得所有的文章信息，文章链接应包含在content属性中
         List<Airticle> allAirticles = airticleService.getAllAirticles(num);
         String string = JSON.toJSONString(allAirticles);
-        return string;
+        if (string == null){
+            return "文章查询失败 ";
+        }
+        return "文章查询成功";
     }
     
 

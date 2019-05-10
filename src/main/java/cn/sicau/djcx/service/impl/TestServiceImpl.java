@@ -22,8 +22,11 @@ public class TestServiceImpl extends ServiceImpl<TestMapper, Test> implements IT
 
     TestMapper testMapper;
 
-    public Integer addTestInfor(Test test){
-        return  1;
+    public Integer addTestInfo(Test test){
+
+        Integer insert = testMapper.insert(test);
+        return insert;
+
     }
 
 }
