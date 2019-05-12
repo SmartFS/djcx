@@ -31,7 +31,7 @@ public class TestController {
     @Autowired
     TestServiceImpl testService;
 
-
+    @ResponseBody
     @GetMapping("/testinfo")
     public String  testInfo(Test test) {
 

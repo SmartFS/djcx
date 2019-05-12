@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.enums.IdType;
 
 import java.io.Serializable;
 
@@ -19,19 +20,18 @@ import java.io.Serializable;
 public class Testresult extends Model<Testresult> {
 
     private static final long serialVersionUID = 1L;
-    @TableId
-    private String sid;
+    @TableId(value = "sid", type = IdType.AUTO)
+    private Long sid;
     @TableField("test_id")
     private String testId;
     private String aid;
     private Float score;
 
-
-    public String getSid() {
+    public Long getSid() {
         return sid;
     }
 
-    public void setSid(String sid) {
+    public void setSid(Long sid) {
         this.sid = sid;
     }
 

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * <p>
- *  前端控制器
+ * 前端控制器
  * </p>
  *
  * @author FS
@@ -24,14 +24,15 @@ public class TestresultController {
     @Autowired
     TestresultServiceImpl testresultService;
 
-
+    @ResponseBody
     @GetMapping("/results")
-    public  String addTestResult(Testresult testresult){
+    public String addTestResult(Testresult testresult) {
 
         Integer integer = testresultService.addTestResult(testresult);
 
         if (integer == null)
-        return "测试结果添加失败";
+            return "测试结果添加失败";
+
         else
             return "测试结果添加成功";
 

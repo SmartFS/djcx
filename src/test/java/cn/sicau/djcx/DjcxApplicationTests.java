@@ -1,8 +1,10 @@
 package cn.sicau.djcx;
 
 import cn.sicau.djcx.entity.Admin;
+import cn.sicau.djcx.entity.Testresult;
 import cn.sicau.djcx.entity.User;
 import cn.sicau.djcx.mapper.AdminMapper;
+import cn.sicau.djcx.mapper.TestresultMapper;
 import cn.sicau.djcx.mapper.UserMapper;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import org.apache.ibatis.annotations.Param;
@@ -27,15 +29,20 @@ public class DjcxApplicationTests {
     UserMapper userMapper;
     @Resource
     AdminMapper adminMapper;
-
+    @Resource
+    TestresultMapper testresultMapper;
 
     @Test
     public void contextLoads() {
-        String format = "yyyy-MM-dd HH:mm:ss";
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(format);
+        Testresult testresult = new Testresult();
+        testresult.setTestId("324");
 
-        String s = simpleDateFormat.format(new Date(Long.parseLong(String.valueOf("1559368035000"))));
-        System.out.println(s);
+        testresult.setScore(2352f);
+        testresult.setAid("wrw");
+
+        Integer insert = testresultMapper.insert(testresult);
+        System.out.println(insert);
+
 
     }
 

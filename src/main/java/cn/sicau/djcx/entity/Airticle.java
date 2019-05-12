@@ -4,6 +4,7 @@ import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
+import com.baomidou.mybatisplus.annotations.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 
@@ -17,6 +18,7 @@ import java.io.Serializable;
  * @author FS
  * @since 2019-04-26
  */
+@TableName(value = "airticle")
 public class Airticle extends Model<Airticle> {
 
     private static final long serialVersionUID = 1L;
