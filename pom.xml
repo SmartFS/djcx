@@ -21,7 +21,7 @@
         <!--mybatisplus orm插件 -->
         <mybatisplus-spring-boot-starter.version>1.0.4</mybatisplus-spring-boot-starter.version>
         <mybatis-plus.version>2.1.9</mybatis-plus.version>
-        <mysql.version>5.1.43</mysql.version>
+        <mysql.version>8.0.28</mysql.version>
     </properties>
 
 
